@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Shooting Game</title>
+</head>
+<body>
+<div id="game_board" style="position: absolute;
+left: 50%;
+top: 30%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+padding: 20px;
+border: solid darkred;
+background: lightgrey;
+color: black;
+">
+    <form id="start_game">
+        <h3>Enter Players Names </h3>
+        <label>Player 1: <input type="text" placeholder="Player1 Name" id="player1_name"  /> </label>
+        <label>Player 2: <input type="text" placeholder="Player2 Name" id="player2_name"  /> </label>
+        <button type="submit">Start Game</button>
+    </form>
+    <div id="loader" style="display: none">
+        Shooting.... du... du...
+    </div>
+    <div id="result" style="display: none">
+        <h1>Game Over</h1>
+        <span id="p1_name"></span>
+        <span id="p1_score"></span>
+        <hr>
+        <span id="p2_name"></span>
+        <span id="p2_score"></span>
+        <hr>
+        <h3>Winner is : <span id="winner"></span></h3>
+        <hr>
+        <div style="text-align: center">
+            <button onclick="location.reload()">Reset</button>
+        </div>
+    </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
